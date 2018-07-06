@@ -3,7 +3,7 @@ Simlife BOM and server-side library
 
 [![Build Status][travis-image]][travis-url] [![Maven Central][maven-image]][maven-url]
 
-Full documentation and information is available on our website at [https://www.simlife.tech/][simlife-url]
+Full documentation and information is available on our website at [https://www.simlife.io/][simlife-url]
 
 This project is used by the Simlife generator. This is the Bill of Materials and server-side library:
 - simlife-dependencies
