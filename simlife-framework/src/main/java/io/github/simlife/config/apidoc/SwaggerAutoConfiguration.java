@@ -78,8 +78,8 @@ public class SwaggerAutoConfiguration {
 
     private final SimlifeProperties.Swagger properties;
 
-    public SwaggerAutoConfiguration(SimlifeProperties jHipsterProperties) {
-        this.properties = jHipsterProperties.getSwagger();
+    public SwaggerAutoConfiguration(SimlifeProperties simLifeProperties) {
+        this.properties = simLifeProperties.getSwagger();
     }
 
     /**
@@ -117,7 +117,7 @@ public class SwaggerAutoConfiguration {
      * @return the Swagger Customizer of Simlife
      */
     @Bean
-    public SimlifeSwaggerCustomizer jHipsterSwaggerCustomizer() {
+    public SimlifeSwaggerCustomizer simLifeSwaggerCustomizer() {
         return new SimlifeSwaggerCustomizer(properties);
     }
 

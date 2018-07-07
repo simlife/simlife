@@ -14,10 +14,10 @@ public class MailEnabledInfoContributor implements InfoContributor {
     private static final String MAIL_ENABLED = "mailEnabled";
 
     @Autowired
-    private SimlifeProperties jHipsterProperties;
+    private SimlifeProperties simLifeProperties;
 
     @Override
     public void contribute(Info.Builder builder) {
-        builder.withDetail(MAIL_ENABLED, jHipsterProperties.getMail().isEnabled());
+        builder.withDetail(MAIL_ENABLED, simLifeProperties.getMail().isEnabled());
     }
 }

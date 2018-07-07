@@ -33,16 +33,16 @@ import io.github.simlife.config.SimlifeProperties;
 @ConditionalOnProperty("simlife.security.client-authorization.client-id")
 public class UaaAutoConfiguration {
 
-    private SimlifeProperties jHipsterProperties;
+    private SimlifeProperties simLifeProperties;
 
-    public UaaAutoConfiguration(SimlifeProperties jHipsterProperties) {
-        this.jHipsterProperties = jHipsterProperties;
+    public UaaAutoConfiguration(SimlifeProperties simLifeProperties) {
+        this.simLifeProperties = simLifeProperties;
     }
 
     @Bean
     public LoadBalancedResourceDetails loadBalancedResourceDetails(LoadBalancerClient loadBalancerClient) {
         LoadBalancedResourceDetails loadBalancedResourceDetails = new LoadBalancedResourceDetails(loadBalancerClient);
-        SimlifeProperties.Security.ClientAuthorization clientAuthorization = jHipsterProperties.getSecurity()
+        SimlifeProperties.Security.ClientAuthorization clientAuthorization = simLifeProperties.getSecurity()
             .getClientAuthorization();
         loadBalancedResourceDetails.setAccessTokenUri(clientAuthorization.getAccessTokenUri());
         loadBalancedResourceDetails.setTokenServiceId(clientAuthorization.getTokenServiceId());

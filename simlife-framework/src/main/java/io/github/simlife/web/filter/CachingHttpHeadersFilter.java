@@ -39,15 +39,15 @@ public class CachingHttpHeadersFilter implements Filter {
 
     private long cacheTimeToLive = DEFAULT_SECONDS_TO_LIVE;
 
-    private SimlifeProperties jHipsterProperties;
+    private SimlifeProperties simLifeProperties;
 
-    public CachingHttpHeadersFilter(SimlifeProperties jHipsterProperties) {
-        this.jHipsterProperties = jHipsterProperties;
+    public CachingHttpHeadersFilter(SimlifeProperties simLifeProperties) {
+        this.simLifeProperties = simLifeProperties;
     }
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        cacheTimeToLive = TimeUnit.DAYS.toMillis(jHipsterProperties.getHttp().getCache().getTimeToLiveInDays());
+        cacheTimeToLive = TimeUnit.DAYS.toMillis(simLifeProperties.getHttp().getCache().getTimeToLiveInDays());
     }
 
     @Override

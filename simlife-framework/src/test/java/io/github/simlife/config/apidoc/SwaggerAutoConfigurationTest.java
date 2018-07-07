@@ -67,8 +67,8 @@ public class SwaggerAutoConfigurationTest {
     public void setup() {
         MockitoAnnotations.initMocks(this);
 
-        final SimlifeProperties jHipsterProperties = new SimlifeProperties();
-        properties = jHipsterProperties.getSwagger();
+        final SimlifeProperties simLifeProperties = new SimlifeProperties();
+        properties = simLifeProperties.getSwagger();
         properties.setHost("test.host.org");
         properties.setProtocols(new String[] { "http", "https" });
         properties.setTitle("test title");
@@ -82,7 +82,7 @@ public class SwaggerAutoConfigurationTest {
         properties.setLicenseUrl("http://test.host.org/license");
         properties.setUseDefaultResponseMessages(false);
 
-        config = new SwaggerAutoConfiguration(jHipsterProperties) {
+        config = new SwaggerAutoConfiguration(simLifeProperties) {
             @Override
             protected Docket createDocket() {
                 Docket docket = spy(super.createDocket());

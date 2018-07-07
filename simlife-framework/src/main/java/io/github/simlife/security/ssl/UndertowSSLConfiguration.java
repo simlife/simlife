@@ -49,21 +49,21 @@ public class UndertowSSLConfiguration {
 
     private final UndertowServletWebServerFactory factory;
 
-    private final SimlifeProperties jHipsterProperties;
+    private final SimlifeProperties simLifeProperties;
 
     private final Logger log = LoggerFactory.getLogger(UndertowSSLConfiguration.class);
 
     public UndertowSSLConfiguration(UndertowServletWebServerFactory undertowServletWebServerFactory,
-        SimlifeProperties jHipsterProperties) {
+        SimlifeProperties simLifeProperties) {
         this.factory = undertowServletWebServerFactory;
-        this.jHipsterProperties = jHipsterProperties;
+        this.simLifeProperties = simLifeProperties;
 
         configuringUserCipherSuiteOrder();
     }
 
     private void configuringUserCipherSuiteOrder() {
         log.info("Configuring Undertow");
-        if (jHipsterProperties.getHttp().isUseUndertowUserCipherSuitesOrder()) {
+        if (simLifeProperties.getHttp().isUseUndertowUserCipherSuitesOrder()) {
             log.info("Setting user cipher suite order to true");
             factory.addBuilderCustomizers(builder -> builder.setSocketOption(UndertowOptions
                 .SSL_USER_CIPHER_SUITES_ORDER, Boolean.TRUE));
