@@ -61,10 +61,19 @@
         <sonar-maven-plugin.version>3.4.0.905</sonar-maven-plugin.version>
     </properties>
 
+    <!--<scm>-->
+        <!--<connection>scm:git:https://github.com/simlife/simlife/</connection>-->
+        <!--<url>https://github.com/simlife/simlife/</url>-->
+    <!--</scm>-->
+
+
     <scm>
-        <connection>scm:git:https://github.com/simlife/simlife/</connection>
-        <url>https://github.com/simlife/simlife/</url>
+        <connection>scm:git:git://github.com/simlife/simlife.git</connection>
+        <developerConnection>scm:git:git@github.com:simlife/simlife.git</developerConnection>
+        <url>https://github.com/simlife/simlife</url>
+        <tag>HEAD</tag>
     </scm>
+
 
     <distributionManagement>
         <snapshotRepository>
@@ -92,10 +101,10 @@
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
             </plugin>
-         <!--   <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-            </plugin>-->
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -178,20 +187,20 @@
                         </rules>
                     </configuration>
                 </plugin>
-                <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-gpg-plugin</artifactId>-->
-                    <!--<version>${maven-gpg-plugin.version}</version>-->
-                    <!--<executions>-->
-                        <!--<execution>-->
-                            <!--<id>sign-artifacts</id>-->
-                            <!--<phase>verify</phase>-->
-                            <!--<goals>-->
-                                <!--<goal>sign</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                    <!--</executions>-->
-                <!--</plugin>-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${maven-gpg-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>

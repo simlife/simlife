@@ -16,3 +16,9 @@ This project is used by the Simlife generator. This is the Bill of Materials and
 [maven-url]: https://maven-badges.herokuapp.com/maven-central/io.github.simlife/simlife-parent
 
 [simlife-url]: https://www.simlife.tech/
+
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-gnupg-export.html
+
+http://pool.sks-keyservers.net/pks/add
+
+mvn -Dgpg.passphrase= deploy
