@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.github.simlife.config.apidoc.SwaggerConfiguration,\
+  io.github.simlife.config.metrics.GraphiteRegistry,\
+  io.github.simlife.config.metrics.PrometheusRegistry,\
+  io.github.simlife.config.SimlifeProperties,\
+  io.github.simlife.security.uaa.UaaAutoConfiguration

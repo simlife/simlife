@@ -1,7 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.simlife.config.apidoc.SwaggerAutoConfiguration,\
-  io.github.simlife.config.apidoc.SwaggerPluginsAutoConfiguration,\
-  io.github.simlife.config.SimlifeProperties,\
-  io.github.simlife.security.uaa.UaaAutoConfiguration,\
-  io.github.simlife.config.info.SimlifeInfoContributorConfiguration,\
-  io.github.simlife.security.ssl.UndertowSSLConfiguration
